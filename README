@@ -1,12 +1,10 @@
 sdlnolock: prevent SDL from locking the screen
 
-Many Linux games use the SDL fullscreen option.
-On my system, this prevents me from alt-tabbing out
-or even using my volume keys.
-This LD_PRELOAD library wraps SDL_SetVideoMode
-to replace the SDL_FULLSCREEN flag with SDL_NOFRAME.
-I've gotten much better results with this.
+This LD_PRELOAD library wraps a few SDL functions
+to prevent behavior that annoys me,
+primarily related to taking exclusive control of the screen.
 
+See the comments in sdlnolock.c for details.
 
 Copyright (c) David Reiss
 
